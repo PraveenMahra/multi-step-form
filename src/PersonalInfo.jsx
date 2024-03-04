@@ -55,11 +55,10 @@ function PersonalInfo() {
   };
 
   const handleNextClick = (e) => {
+    e.preventDefault();
     if (validateForm()) {
       // Proceed to the next page
       history.push("/select-plan");
-    } else {
-      e.preventDefault();
     }
   };
 
