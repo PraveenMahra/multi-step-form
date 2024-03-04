@@ -55,11 +55,13 @@ function PersonalInfo() {
   };
 
   const handleNextClick = (e) => {
-    e.preventDefault();
     if (validateForm()) {
       // Proceed to the next page
       history.push("/select-plan");
+      return;
     }
+
+    e.preventDefault();
   };
 
   const getInputBorderColor = (fieldName) => {
@@ -77,7 +79,7 @@ function PersonalInfo() {
         </p>
       </div>
 
-      <form className="flex flex-col ">
+      <form className="flex flex-col" method="POST">
         <label className="relative" htmlFor="name">
           Name
           {errors.name && (
