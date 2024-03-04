@@ -1,45 +1,10 @@
 import { Link } from "react-router-dom";
 import { useAppContext } from "./AppContext";
+import { plans } from "./plan";
 
 function Summary() {
   const { state } = useAppContext();
   const { selectedBilling, selectedPlanIndex, selectedAddOns } = state;
-
-  const plans = {
-    monthly: [
-      {
-        icon: "/src/assets/images/icon-arcade.svg",
-        name: "Arcade",
-        price: "$9/mo",
-      },
-      {
-        icon: "/src/assets/images/icon-advanced.svg",
-        name: "Advanced",
-        price: "$12/mo",
-      },
-      { icon: "/src/assets/images/icon-pro.svg", name: "Pro", price: "$15/mo" },
-    ],
-    yearly: [
-      {
-        icon: "/src/assets/images/icon-arcade.svg",
-        name: "Arcade",
-        price: "$90/year",
-        text: "2 months free",
-      },
-      {
-        icon: "/src/assets/images/icon-advanced.svg",
-        name: "Advanced",
-        price: "$120/year",
-        text: "2 months free",
-      },
-      {
-        icon: "/src/assets/images/icon-pro.svg",
-        name: "Pro",
-        price: "$150/year",
-        text: "2 months free",
-      },
-    ],
-  };
 
   const selectedPlans =
     selectedBilling === "monthly" ? plans.monthly : plans.yearly;

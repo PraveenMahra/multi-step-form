@@ -1,11 +1,9 @@
+import img from "./assets/images/icon-thank-you.svg";
+
 function ThankYou() {
   return (
     <div className="flex flex-col items-center tracking-wide gap-8 justify-center h-[50rem]">
-      <img
-        className="w-[6rem] h-[6rem]"
-        src="/src/assets/images/icon-thank-you.svg"
-        alt="icon"
-      />
+      <img className="w-[6rem] h-[6rem]" src={img} alt="icon" />
       <h2 className="text-[#011b3b] text-[3.2rem] font-bold tracking-wide">
         Thank You!
       </h2>
