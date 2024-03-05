@@ -1,8 +1,9 @@
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory } from "history";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PersonalInfo() {
-  const history = createBrowserHistory();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -57,7 +58,7 @@ function PersonalInfo() {
   const handleNextClick = (e) => {
     if (validateForm()) {
       // Proceed to the next page
-      history.push("/select-plan");
+      navigate("/select-plan");
       return;
     }
 
